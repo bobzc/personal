@@ -1,0 +1,85 @@
+/* ---- reset ------*/
+html, body, div, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+.nav {
+  text-align: center;
+  overflow: hidden;
+  margin: 2em auto;
+  width: 600px;
+  position: relative; }
+  
+ .nav a {
+    display: block;
+    position: relative;
+	float: left;
+	padding: 1em 0 2em;
+    width: 20%;
+	text-decoration: none;
+	color: #393939;
+	-webkit-transition: .7s;
+	-moz-transition: .7s;
+	-o-transition: .7s;
+	-ms-transition: .7s;
+	transition: .7s; 
+}
+.nav a:hover {
+	color: #c6342e; }
+
+#effect {
+  position: absolute;
+  left: -12.5%;
+  -webkit-transition: 0.7s ease-in-out;
+  -moz-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  -ms-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out; }
+  
+.underline{
+  display:none;
+  position: absolute;
+}
+
+#ul1{left:10%;
+	 display: inline;}
+#ul2{left:30%;}
+#ul3{left:50%;}
+#ul4{left:70%;}
+#ul5{left:90%;}
+
+.nav a:nth-child(1):hover ~ #effect {
+	  left: 10%; }
+.nav a:nth-child(2):hover ~ #effect {
+	  left: 30%; }
+.nav a:nth-child(3):hover ~ #effect {
+	  left: 50%; }
+.nav a:nth-child(4):hover ~ #effect {
+	  left: 70%; }
+.nav a:nth-child(5):hover ~ #effect {
+	  left: 90%; }
+
+/* ----- line example -----*/
+
+.ph-line-nav #effect{
+  width: 90px;
+  height: 2px;
+  bottom: 36px;
+  background: #c6342e;
+  box-shadow: 0 1px 0 white; 
+  margin-left:-45px;
+}
+
+
+.ph-line-nav .underline{
+  width: 90px;
+  height: 2px;
+  bottom: 36px;
+  background: #999999;
+  box-shadow: 0 1px 0 white; 
+  margin-left:-45px;
+}

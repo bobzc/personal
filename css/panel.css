@@ -1,0 +1,58 @@
+body {
+  font-family: "Unica One";
+  font-size: 1.5em;
+  background-image: url(../images/bg-body.jpg);
+  text-shadow: 0px 1px 0px #FFF;
+ }
+ 
+ 
+ footer{
+ 	font-size: 15px;
+	position:relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+	//top: 420px;
+ }
+
+#home,  #contact, #links, #learning, #knowledge{
+  display:none;
+  margin-left: 500px;
+   overflow: hidden;
+   width: 1200px;
+   height: 350px;
+   position: absolute;
+ }
+ 
+ #knowledge{
+	margin-left:320px;
+ }
+ 
+#home{
+	display:block;
+}
+ 
+.separator{
+	position: relative;	
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ 
+ #line1{
+	top: -60px;
+ }
+ 
+ #line2{
+	//top: px;
+ }
+ 
+ #panel{
+ // border: 1px solid;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left: 50px;
+  overflow: hidden;
+  width: 1500px; 
+   height: 400px;
+  position: relative; }

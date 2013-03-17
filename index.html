@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <meta name="author" content="Zhou Chao" />
+ <meta name="description" content="Zhou Chao's Homepage"/>
+ <meta name="from" content="Computer Science and Engineering, The Chinese University of Hong Kong" />
+ 
+ <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+<link href='http://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link href="css/liteaccordion.css" rel="stylesheet" />
+<script src="scripts/liteaccordion.jquery.js"></script>
+<link rel="stylesheet" href="css/nav.css"  media="screen" title="no title" >
+<link rel="stylesheet" href="css/panel.css">
+<title>Zhou's Personal Page</title>
+</head>
+<body>	
+	<div class="ph-line-nav nav">
+		<a id="homeButton" onclick="change()" href="#">Home</a>
+		<a id="knowledgeButton" href="#">Kownledge</a>
+		<a id="learningButton" href="#">Learning</a>
+		<a id="linksButton" href="#">Links</a>
+		<a id="contactButton" href="#">Contact</a>
+		<div id="effect"></div>
+		<div id="ul1" class="underline"></div>
+		<div id="ul2" class="underline"></div>
+		<div id="ul3" class="underline"></div>
+		<div id="ul4" class="underline"></div>
+		<div id="ul5" class="underline"></div>
+	</div>
+
+<img id="line1" class="separator" src="images/separator.jpg" />
+
+<div id="panel"> 	
+	<div class="block" id="home" >
+		My INFO:<br /><br />
+		Zhou Chao<br />
+		<a href="http://www.cse.cuhk.edu.hk" target="_blank">Computer Science and Engineering</a><br /> 
+		<a href="http://www.cuhk.edu.hk" target="_blank">The Chinese University of Hong Kong</a><br />
+		Shatin, N.T.<br />
+		Hong Kong SAR.<br />
+	</div>
+	
+	<div class="block" id="knowledge">
+		        <div id="one">
+            <ol>
+                <li>
+                    <h2><span>Programming Languages</span></h2>
+                    <div>
+							<div id="chart_div1" style="width: 554px; height: 270px;"></div>
+                            <p class="ap-caption">Programming Languages</p>
+                    </div>
+                </li>
+                <li>
+                    <h2><span>Web</span></h2>
+                    <div>
+						<div id="chart_div2" style="width: 554px; height: 270px;"></div>
+                        <p class="ap-caption">Web</p>       
+                    </div>
+                </li>
+                <li>
+                    <h2><span>Database Systems</span></h2>
+                    <div>
+						<div id="chart_div3" style="width: 554px; height: 270px;"></div>
+                        <p class="ap-caption">Database Systems</p>
+                    </div>
+                </li>
+                <li>
+                    <h2><span>Platforms</span></h2>
+                    <div>
+						<div id="chart_div4" style="width: 554px; height: 270px;"></div>
+						<p class="ap-caption">Platforms</p>
+                    </div>
+                </li>
+                <li>
+                    <h2><span>Others</span></h2>
+					<div>
+						<div id="chart_div5" style="width: 554px; height: 270px;"></div>
+						<p class="ap-caption">Others</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+	</div>
+	
+	<div class="block" id="learning">
+		Now Learning:<br /><br />
+		
+		HTML5<br />
+		Node.js<br />
+		Ruby on Rails	
+	</div>
+	
+	<div class="block" id="links">
+		My Page:<br /><br />
+		
+		Personal: <a href="http://www.zcmysite.com" target="_blank">www.zcmysite.com</a><br />
+		CSE Dept: <a href="http://www.cse.cuhk.edu.hk/~czhou0" target="_blank">www.cse.cuhk.edu.hk/~czhou0</a><br />
+		Blog: <a href="http://www.zcmysite.com/wordpress" target="_blank">www.zcmysite.com/wordpress</a	>
+	</div>
+	
+	<div class="block" id="contact">
+		Feel free to contact me!<br/><br/>
+		E-mail: bobchou2010 [at] gmail.com<br />
+		Tel(HK): (+852) 6735-8139<br />
+		Tel(CN): (+86) 188-6861-4546
+	</div>
+</div>	
+
+<img id="line2" class="separator" src="images/separator.jpg" />
+<footer>Copyright 2013 &copy; Zhou Chao </footer>
+<script>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39020498-2']);
+  _gaq.push(['_setDomainName', 'cse.cuhk.edu.hk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+$( "#homeButton" ).click(function() {
+  $(".underline").hide();
+  $("#ul1").show();
+  $( ".block" ).hide( "slide", {duration: 600,  direction: "right"} );
+  $( "#home" ).show( "slide", {duration: 1000, easing: "easeOutBack"} );
+});
+
+$( "#contactButton" ).click(function() {
+  $(".underline").hide();
+  $("#ul5").show();
+  $( ".block" ).hide( "slide", {duration: 600,  direction: "right"} );
+  $( "#contact" ).show( "slide", {duration: 1000, easing: "easeOutBack",} );
+});
+
+$( "#linksButton" ).click(function() {
+  $(".underline").hide();
+  $("#ul4").show();
+  $( ".block" ).hide( "slide", {duration: 600,  direction: "right"} );
+  $( "#links" ).show( "slide", {duration: 1000, easing: "easeOutBack",} );
+});
+
+$( "#knowledgeButton" ).click(function() {
+  $(".underline").hide();
+  $("#ul2").show();
+  $( ".block" ).hide( "slide", {duration: 600,  direction: "right"} );
+  $( "#knowledge" ).show( "slide", {duration: 1000, easing: "easeOutBack",} );
+});
+
+$( "#learningButton" ).click(function() {
+  $(".underline").hide();
+  $("#ul3").show();
+  $( ".block" ).hide( "slide", {duration: 600,  direction: "right"} );
+  $( "#learning" ).show( "slide", {duration: 1000, easing: "easeOutBack",} );
+});
+
+$( "#progressbar" ).progressbar({
+  value: 37
+});
+
+(function($, d) {
+                $('#one').liteAccordion({
+                        onTriggerSlide : function() {
+                            this.find('figcaption').fadeOut();
+                        },
+                        onSlideAnimComplete : function() {
+                            this.find('figcaption').fadeIn();
+                        },
+						containerWidth : 800,                   // fixed (px)
+						containerHeight : 270,                  // fixed (px)
+						slideSpeed : 400,   
+						autoPlay : false,
+                        pauseOnHover : true,
+                        theme : 'stitch',
+                        rounded : true,
+                        enumerateSlides : true
+                }).find('figcaption:first').show();
+            })(jQuery, document);
+			
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Language', 'Ability'],
+          ['C',  85],
+          ['Java',  70],
+          ['C++',  70],
+          ['Smalltalk',  50],
+		  ['Fortran',  40],
+		  ['Prolog',  30],
+		  ['Cobol',  25]
+        ]);
+
+        var options = {
+			backgroundColor: 'none',
+			height: 270,
+			width: 554,
+			colors: ['#009292'],
+			fontName: "Unica One",
+			fontSize: 15,
+			chartArea:{top: 25},
+			legend: {position: 'none'},
+        };
+		
+		options['hAxis'] = {'format': "#,###'%'"};
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
+        chart.draw(data, options);
+
+		var data = google.visualization.arrayToDataTable([
+          ['Language', 'Ability'],
+          ['HTML',  80],
+          ['JavaScript',  70],
+          ['CSS',  70],
+          ['Perl',  60],
+		  ['php',  50],
+		  ['Python',  30]
+        ]);
+		var chart = new google.visualization.BarChart(document.getElementById('chart_div2'));
+        chart.draw(data, options);
+		
+		var data = google.visualization.arrayToDataTable([
+          ['Language', 'Ability'],
+          ['MySQL',  70],
+          ['Oracle',  70],
+          ['SQLite',  70]
+        ]);
+		 var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
+        chart.draw(data, options);
+		
+		var data = google.visualization.arrayToDataTable([
+          ['Platforms', 'Ability'],
+          ['Linux',  70],
+          ['UNIX',  30],
+          ['Windows',  80],
+          ['Mac OS',  10],
+        ]);
+		var chart = new google.visualization.BarChart(document.getElementById('chart_div4'));
+        chart.draw(data, options);
+		
+				var data = google.visualization.arrayToDataTable([
+          ['Others', 'Ability'],
+          ['LaTeX',  50],
+          ['Git',  80]
+        ]);
+		 var chart = new google.visualization.BarChart(document.getElementById('chart_div5'));
+        chart.draw(data, options);
+      }
+</script>	
+</body>
+</html>
